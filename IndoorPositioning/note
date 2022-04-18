@@ -1,0 +1,7 @@
+后三十个字节的格式
+https://wiki.aprbrother.com/zh/iBeacon_Packet.html#ibeacon-packet-structure 
+
+After 9 bytes of constant preamble, the Proximity UUID, Major and Minor values are transmitted.
+
+UUID is 16 bytes long, Major and Minor are 2 bytes long. Together they form an ID for your iBeacon. Mobile devices recognize which Beacon they approach on the basis of these values.
+
