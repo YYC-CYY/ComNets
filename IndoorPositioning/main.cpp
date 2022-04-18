@@ -5,12 +5,15 @@ using namespace std;
 
 int main(){
     Node* node = new Node[3];
-    node[0] = new _Node(); node[0]->r = 2; node[0]->x = 0; node[0]->y = 0;
-    node[1] = new _Node(); node[1]->r = 2; node[1]->x = 2; node[1]->y = 0;
-    node[2] = new _Node(); node[2]->r = 2; node[2]->x = 1; node[2]->y = 2;
+    // node[0] = new _Node(); node[0]->r = 4; node[0]->p.first = 0; node[0]->p.second = 0;
+    // node[1] = new _Node(); node[1]->r = 4; node[1]->p.first = 4; node[1]->p.second = 0;
+    // node[2] = new _Node(); node[2]->r = 4; node[2]->p.first = 2; node[2]->p.second = 2;
+    node[0] = new _Node(); node[0]->r = 6; node[0]->p.first = 0; node[0]->p.second = 0;
+    node[1] = new _Node(); node[1]->r = 6; node[1]->p.first = 6; node[1]->p.second = 0;
+    node[2] = new _Node(); node[2]->r = 0.5; node[2]->p.first = 0; node[2]->p.second = 4;
 
-    pair<double,double> point = triangulation(node);
-    cout << "(" << point.first << ", " << point.second << ")" << endl;
+    Point p = triangulation(node);
+    cout << "(" << p.first << ", " << p.second << ")" << endl;
     delete node[0];
     delete node[1];
     delete node[2];
